@@ -1,0 +1,53 @@
+Andre: 46 - 55
+
+
+46. Where does Jenkins store global configuration and job-related configuration?
+Ans Global Configuration:
+
+Jenkins Home Directory: The global configuration settings for Jenkins are stored in its home directory. This directory is usually defined during the Jenkins installation process and can be found at different locations based on the installation method. Common default locations are:
+
+Jenkins home - /var/lib/Jenkins in Linux
+config.xml: Within the Jenkins home directory, the main configuration file is named config.xml. This file stores various global settings, including Jenkins system configuration, plugin settings, security settings, and other general configurations.
+
+Job-related Configuration:
+
+Jobs Directory: Each Jenkins job you create is represented by a separate directory in the Jenkins file system. These job directories are typically stored under the jobs directory within the Jenkins home directory.
+config.xml: Inside each job directory, there is a file named config.xml. This file stores the specific configuration details for that job, including build steps, post-build actions, triggers, and other job-related settings
+
+47. How do you restore the system configuration and all the jobs?
+Ans- ??????
+
+
+.
+48. If you want to change jdk for all your 1000 Jenkins jobs or any other configurations? How do you do it?
+Ans - we go to masters nodes and change their labels
+49. How many jobs files are in Jenkins?
+Ans- 
+There are six types of jobs we can create
+1. Freestyle project
+2. Maven project
+3. Pipeline project
+4. multi-configuration project
+5. External jobs
+6. Multi-Pipeline jobs
+Mostly we will create a job in free-style projects....bcz it supports all kinds of tools.
+
+50. (i) How do you create a Jenkins job? (ii) How did you set up build and deployment using Jenkins for your project?
+Ans- Ans: i) in Jenkins dashboard---> in left side panel ---- > there will be an option
+called "new job" Click on it and create the job.
+then go back to Jenkins dashboard and click on manage Jenkins ----> configure system --- > There we have to configure the source code path and JDK version and save it now go to the project and click on configure and there we invoke jdk for build and for deployment we copy the artifacts into tomcat server...
+
+51. How do you or how many builds u store for your project?
+Ans- it all depends on your project but the maximum is 10 builds per project.
+
+52. What are parameterized builds?
+Ans - In other to use parameterized builds in Jenkins, first you go to the Jenkins dashboard and click on the project you are working on, there you will b able to view the job dashboard, click on the configure section where you will be able to see the option " General" in there you click on 'this project is parameterized'. There you could add the parameter you wish to build with a password parameter, run parameter, file parameter, string parameter, etc 
+
+53. How do you run different Jenkins jobs with different JDK?
+Ans- first you go to the Jenkins dashboard and click on manage Jenkins on your left-hand side, then go to system configurations and click on tools there you could add and manage the different JDK versions as you want and save. Then when running your job you could choose the JDK version you want to use on that particular job. 
+
+54. What is a “CRON TAB” and “CRON SCM”?
+Ans - In other to use the crontab and cron scm in Jenkins, first you go to the Jenkins dashboard and click on the project you are working on, there you will b able to view the job dashboard, click on the configure section where you will be able to see the option " build triggers " in there you will find build periodically which is the cron tab were to could trigger your build every second, minute, hour, day, etc but this will trigger the build even when there is no change in the source code. why cron scm is the option called " pull scm " which could also trigger your build every second, minute, hour, day, etc but this will trigger the build only when there is a change in the SCM.
+
+55. Can you use Jenkins for non-java applications?
+Ans - Yes, but Jenkins is mostly used for Java applications
